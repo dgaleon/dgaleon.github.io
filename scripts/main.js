@@ -2,10 +2,10 @@ let myImage = document.querySelector("img");
 
 myImage.onclick = function() {
     let mySrc = myImage.getAttribute('src');
-    if(mySrc === 'images/ff.png') {
-        myImage.setAttribute('src','images/ff2.png');
+    if(mySrc === 'images/good.png') {
+        myImage.setAttribute('src','images/snek.png');
     } else {
-        myImage.setAttribute('src','images/ff.png');
+        myImage.setAttribute('src','images/good.png');
     }
 }
 
@@ -18,7 +18,7 @@ function setUserName() {
         setUserName();
     } else {
         localStorage.setItem("name", myName);
-        myHeading.textContent = "Mozilla is the best bruh, " + myName;
+        myHeading.textContent = "Welcome to Billabong Valley, " + myName;
     }
 }
 
@@ -27,7 +27,7 @@ if(!localStorage.getItem("name")) {
     setUserName();
 } else {
     let storedName = localStorage.getItem("name");
-    myHeading.textContent = "Mozilla is fire bruh, " + storedName;
+    myHeading.textContent = "Billabong Valley welcomes you, " + storedName;
 }
 
 myButton.onclick = function() {
